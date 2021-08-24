@@ -29,6 +29,6 @@ WHERE sales < 20;
 
 SELECT *
 FROM albums
-WHERE genre = 'Rock';
+WHERE genre like '%Rock%';
 # Displays all albums that's genres are EXCLUSIVELY Rock
 
