@@ -13,4 +13,4 @@ ORDER BY salary DESC LIMIT 5;
 # 4
 SELECT emp_no
 FROM salaries
-ORDER BY salary LIMIT 4 OFFSET 40;
+ORDER BY salary DESC LIMIT 5 OFFSET 45;
