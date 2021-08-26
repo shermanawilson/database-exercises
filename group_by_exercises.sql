@@ -1,33 +1,9 @@
 USE employees;
 
-SELECT COUNT(*)
-FROM employees;
-
-# How Many Employees Without An A in their First Name
-SELECT COUNT(first_name)
-FROM employees
-WHERE first_name NOT LIKE '%a%';
-
-# How Many Of Each Specific First Name Is There
-SELECT first_name,
-       COUNT(first_name)
-           AS NumberOfRecordsWithThisFirstName
-FROM employees
-WHERE first_name NOT LIKE '%a%'
-GROUP BY first_name;
-
-# How Many People Hired Each Day For 10 Days
-SELECT hire_date, COUNT(*)
-FROM employees
-GROUP BY hire_date
-ORDER BY COUNT(*) DESC
-LIMIT 10;
-
 # 2
 SELECT title
 FROM titles
-GROUP BY title
-LIMIT 7;
+GROUP BY title;
 
 
 # 3
