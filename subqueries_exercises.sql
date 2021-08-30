@@ -95,7 +95,7 @@ WHERE emp.gender = 'F'
     FROM dept_manager AS dm
     WHERE CURRENT_DATE BETWEEN dm.from_date AND dm.to_date
 )
-    )
+    );
 
 
 # BONUS # 1
@@ -126,6 +126,18 @@ WHERE emp.emp_no IN (
         SELECT MAX(sal.salary)
         FROM salaries sal
         )
+    );
+
+
+# Something Cool? WAAAAY Quicker
+
+SELECT emp.first_name, emp.last_name
+FROM employees emp
+WHERE emp.emp_no = (
+    SELECT s.emp_no
+    FROM salaries s
+    ORDER BY s.salary
+    DESC LIMIT 1
     );
 
 
